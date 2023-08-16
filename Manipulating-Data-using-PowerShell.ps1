@@ -21,7 +21,7 @@ foreach ($key in $employeesWithIdentifiers.Keys) {
 
 $employeesWithIdentifiers
 
-# Add a New Row toi the Nested Hashtable
+# Add a New Row too the Nested Hashtable
 $employeesWithIdentifiers["EID47389"] = @{
     "Name"       = "Alice Brown"
     "Age"        = 32
