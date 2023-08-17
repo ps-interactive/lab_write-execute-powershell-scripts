@@ -58,6 +58,7 @@ $jsonData = @"
     ]
 }
 "@
+$jsonData = $jsonData | ConvertFrom-Json
 
 # Create a XML Variable Loaded Static with Data
 $xmlData = @"
