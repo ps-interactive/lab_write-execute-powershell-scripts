@@ -14,12 +14,22 @@ $hashtable
 $hashtable["Age"] = "31"
 $hashtable
 
+# Print out keys and values
+foreach ($employeeIdentifier in $employeesWithIdentifiers.Keys) {
+    $employeeDetails = $employeesWithIdentifiers[$employeeIdentifier]
+    Write-Host -NoNewLine "Identifier: $employeeIdentifier"
+    Write-Host -NoNewLine (", Name: " + $employeeDetails["Name"])
+    Write-Host -NoNewLine (", Age: " + $employeeDetails["Age"])
+    Write-Host -NoNewLine (", Department: " + $employeeDetails["Department"])
+    Write-Host -NoNewLine (", Country: " + $employeeDetails["Country"])
+    Write-Host ""
+}
+
+
 # Add a New Column to a Nested Hashtable
 foreach ($key in $employeesWithIdentifiers.Keys) {
     $employeesWithIdentifiers[$key]["Country"] = "USA"
 }
-
-$employeesWithIdentifiers
 
 # Add a New Row too the Nested Hashtable
 $employeesWithIdentifiers["EID47389"] = @{
@@ -28,8 +38,6 @@ $employeesWithIdentifiers["EID47389"] = @{
     "Department" = "Human Resources"
     "Country" = "UK"
 }
-
-$employeesWithIdentifiers
 
 
 ## Create Variables Containing Data
